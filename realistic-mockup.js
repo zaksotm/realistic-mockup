@@ -25,7 +25,7 @@ function init() {
 	
 	console.log("ghjghj");
 	
-	gLoader.load('mockup_v1.11.gltf', function ( gltf ) {
+	gLoader.load('mockup_v1.12.gltf', function ( gltf ) {
 		scene.add( gltf.scene );
 		model = gltf.scene;
 		}
