@@ -1,0 +1,191 @@
+<html>
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+	<h1 align="center">Realistic Mockup Viewer v1.085</h1>
+	<script src="./three.min.js"></script>
+	<script src="./GLTFLoader.js"></script>
+	<script src="./Color.js"></script>
+	<div id="canvasHolder">
+		<button id="apply">Apply Texture</button>
+		<input type="file" id="inputFileToLoad">
+		
+		<label for="heelColor">Heel Color:</label>
+		<select id="heelColor" name="Heel Color">
+			<option value="000000">Black</option>
+			<option value="333538">Onyx</option>
+			<option value="5f6468">Charcoal</option>
+			<option value="97a0a7">Concrete</option>
+			<option value="e4e5e6">Quicksilver</option>
+			<option value="ffffff">Bleach</option>
+			<option value="372820">Rich Brown</option>
+			<option value="716257">Mushroom</option>
+			<option value="bab3a0">Sand</option>
+			<option value="f9f4ec">Natural</option>
+			<option value="081e2c">Navy</option>
+			<option value="29217d">Ultramarine</option>
+			<option value="003e66">Lagoon</option>
+			<option value="0169ca">Cerulean</option>
+			<option value="529afc">Cornflower</option>
+			<option value="009ff1">Cyan</option>
+			<option value="01aec9">Peacock</option>
+			<option value="9dfbe7">Aruba</option>
+			<option value="6ac4dd">Lake</option>
+			<option value="4ca696">Seafoam</option>
+			<option value="00947d">Reef</option>
+			<option value="007171">Teal</option>
+			<option value="2b4423">Pine</option>
+			<option value="21772f">Kelly</option>
+			<option value="14b25a">Jade</option>
+			<option value="60933b">Turf</option>
+			<option value="a0ce3e">Lime</option>
+			<option value="d5d03a">Goldenrod</option>
+			<option value="fff71b">Yellow</option>
+			<option value="ffc938">Sunflower</option>
+			<option value="d8a15e">Carmel</option>
+			<option value="ff9a23">Clementine</option>
+			<option value="fb686d">Living Coral</option>
+			<option value="fd5130">Persimmon</option>
+			<option value="db1d3c">Red Orange</option>
+			<option value="c50f2d">Red</option>
+			<option value="a84c28">Burnt Orange</option>
+			<option value="763742">Rust</option>
+			<option value="581c32">Maroon</option>
+			<option value="c40876">Deep Pink</option>
+			<option value="de4b9b">Hibiscus</option>
+			<option value="fdaeca">Blush</option>
+			<option value="f7bfab">Peach</option>
+			<option value="a08dd6">Lavender</option>
+			<option value="77479f">Iris</option>
+			<option value="5d1e5c">Purple</option>
+			<option value="401e72">Royal Purple</option>
+			<option value="653c2c">Moose</option>
+			<option value="6753b2">Violet</option>
+			<option value="76c727">Green Apple</option>
+			<option value="fd673e">Carrot</option>
+			<option value="3c2f8f">Lapis</option>
+			<option value="2fd078">Parrot</option>
+			<option value="638ee4">French Blue</option>
+		</select>
+		
+		<label for="toeColor">Toe Color:</label>
+		<select id="toeColor" name="Toe Color">
+			<option value="000000">Black</option>
+			<option value="333538">Onyx</option>
+			<option value="5f6468">Charcoal</option>
+			<option value="97a0a7">Concrete</option>
+			<option value="e4e5e6">Quicksilver</option>
+			<option value="ffffff">Bleach</option>
+			<option value="372820">Rich Brown</option>
+			<option value="716257">Mushroom</option>
+			<option value="bab3a0">Sand</option>
+			<option value="f9f4ec">Natural</option>
+			<option value="081e2c">Navy</option>
+			<option value="29217d">Ultramarine</option>
+			<option value="003e66">Lagoon</option>
+			<option value="0169ca">Cerulean</option>
+			<option value="529afc">Cornflower</option>
+			<option value="009ff1">Cyan</option>
+			<option value="01aec9">Peacock</option>
+			<option value="9dfbe7">Aruba</option>
+			<option value="6ac4dd">Lake</option>
+			<option value="4ca696">Seafoam</option>
+			<option value="00947d">Reef</option>
+			<option value="007171">Teal</option>
+			<option value="2b4423">Pine</option>
+			<option value="21772f">Kelly</option>
+			<option value="14b25a">Jade</option>
+			<option value="60933b">Turf</option>
+			<option value="a0ce3e">Lime</option>
+			<option value="d5d03a">Goldenrod</option>
+			<option value="fff71b">Yellow</option>
+			<option value="ffc938">Sunflower</option>
+			<option value="d8a15e">Carmel</option>
+			<option value="ff9a23">Clementine</option>
+			<option value="fb686d">Living Coral</option>
+			<option value="fd5130">Persimmon</option>
+			<option value="db1d3c">Red Orange</option>
+			<option value="c50f2d">Red</option>
+			<option value="a84c28">Burnt Orange</option>
+			<option value="763742">Rust</option>
+			<option value="581c32">Maroon</option>
+			<option value="c40876">Deep Pink</option>
+			<option value="de4b9b">Hibiscus</option>
+			<option value="fdaeca">Blush</option>
+			<option value="f7bfab">Peach</option>
+			<option value="a08dd6">Lavender</option>
+			<option value="77479f">Iris</option>
+			<option value="5d1e5c">Purple</option>
+			<option value="401e72">Royal Purple</option>
+			<option value="653c2c">Moose</option>
+			<option value="6753b2">Violet</option>
+			<option value="76c727">Green Apple</option>
+			<option value="fd673e">Carrot</option>
+			<option value="3c2f8f">Lapis</option>
+			<option value="2fd078">Parrot</option>
+			<option value="638ee4">French Blue</option>
+		</select>
+		
+		<label for="cuffColor">Cuff Color:</label>
+		<select id="cuffColor" name="Cuff Color">
+			<option value="000000">Black</option>
+			<option value="333538">Onyx</option>
+			<option value="5f6468">Charcoal</option>
+			<option value="97a0a7">Concrete</option>
+			<option value="e4e5e6">Quicksilver</option>
+			<option value="ffffff">Bleach</option>
+			<option value="372820">Rich Brown</option>
+			<option value="716257">Mushroom</option>
+			<option value="bab3a0">Sand</option>
+			<option value="f9f4ec">Natural</option>
+			<option value="081e2c">Navy</option>
+			<option value="29217d">Ultramarine</option>
+			<option value="003e66">Lagoon</option>
+			<option value="0169ca">Cerulean</option>
+			<option value="529afc">Cornflower</option>
+			<option value="009ff1">Cyan</option>
+			<option value="01aec9">Peacock</option>
+			<option value="9dfbe7">Aruba</option>
+			<option value="6ac4dd">Lake</option>
+			<option value="4ca696">Seafoam</option>
+			<option value="00947d">Reef</option>
+			<option value="007171">Teal</option>
+			<option value="2b4423">Pine</option>
+			<option value="21772f">Kelly</option>
+			<option value="14b25a">Jade</option>
+			<option value="60933b">Turf</option>
+			<option value="a0ce3e">Lime</option>
+			<option value="d5d03a">Goldenrod</option>
+			<option value="fff71b">Yellow</option>
+			<option value="ffc938">Sunflower</option>
+			<option value="d8a15e">Carmel</option>
+			<option value="ff9a23">Clementine</option>
+			<option value="fb686d">Living Coral</option>
+			<option value="fd5130">Persimmon</option>
+			<option value="db1d3c">Red Orange</option>
+			<option value="c50f2d">Red</option>
+			<option value="a84c28">Burnt Orange</option>
+			<option value="763742">Rust</option>
+			<option value="581c32">Maroon</option>
+			<option value="c40876">Deep Pink</option>
+			<option value="de4b9b">Hibiscus</option>
+			<option value="fdaeca">Blush</option>
+			<option value="f7bfab">Peach</option>
+			<option value="a08dd6">Lavender</option>
+			<option value="77479f">Iris</option>
+			<option value="5d1e5c">Purple</option>
+			<option value="401e72">Royal Purple</option>
+			<option value="653c2c">Moose</option>
+			<option value="6753b2">Violet</option>
+			<option value="76c727">Green Apple</option>
+			<option value="fd673e">Carrot</option>
+			<option value="3c2f8f">Lapis</option>
+			<option value="2fd078">Parrot</option>
+			<option value="638ee4">French Blue</option>
+		</select>
+	</div>
+
+	<script src="./realistic-mockup.js"></script>
+	</body>
+</html>
