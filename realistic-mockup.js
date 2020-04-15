@@ -33,7 +33,7 @@ function init() {
 
 	console.log("ghjghj");
 
-	gLoader.load('mockup_v2.06.gltf', function ( gltf ) {
+	gLoader.load('mockup_v2.07.gltf', function ( gltf ) {
 		scene.add( gltf.scene );
 		model = gltf.scene;
 		}
