@@ -33,7 +33,7 @@ function init() {
 
 	console.log("ghjghj");
 
-	gLoader.load('mockup_v2.07.gltf', function ( gltf ) {
+	gLoader.load('mockup_v2.09.gltf', function ( gltf ) {
 		scene.add( gltf.scene );
 		model = gltf.scene;
 		}
@@ -74,8 +74,8 @@ function init() {
 					//Create material from bitmap
 					var materialBitmap = new THREE.MeshStandardMaterial({
 						map: bitmapTexture,
-						//opacity: 0.8,
-						//transparent: true,
+						opacity: 0.90,
+						transparent: true,
 					});
 
 					//Get and create material of Heel color
@@ -83,8 +83,8 @@ function init() {
 					var heelColorHex = heelColor.options[heelColor.selectedIndex].value;
 					var materialHeel = new THREE.MeshStandardMaterial({
 						color: parseInt(heelColorHex, 16),
-						//opacity: 0.8,
-						//transparent: true,
+						opacity: 0.90,
+						transparent: true,
 					});
 
 					//Get and create material of Toe color
@@ -92,8 +92,8 @@ function init() {
 					var toeColorHex = toeColor.options[toeColor.selectedIndex].value;
 					var materialToe = new THREE.MeshStandardMaterial({
 						color: parseInt(toeColorHex, 16),
-						//opacity: 0.8,
-						//transparent: true,
+						opacity: 0.90,
+						transparent: true,
 					});
 
 					//Get and create material of Cuff color
@@ -101,8 +101,8 @@ function init() {
 					var cuffColorHex = cuffColor.options[cuffColor.selectedIndex].value;
 					var materialCuff = new THREE.MeshStandardMaterial({
 						color: parseInt(cuffColorHex, 16),
-						//opacity: 0.8,
-						//transparent: true,
+						opacity: 0.90,
+						transparent: true,
 					});
 
 					//Assign new Materials
