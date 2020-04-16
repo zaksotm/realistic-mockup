@@ -11,6 +11,12 @@ function init() {
 	var buttonLoadFile = document.getElementById("apply");
 	buttonLoadFile.onclick = applyTexture;
 
+	var buttonFullSize = document.getElementById("fullSize");
+	buttonFullSize.onclick = fullSize;
+
+	var buttonSmallSize = document.getElementById("smallSize");
+	buttonSmallSize.onclick = smallSize;
+
 	//create scene for 3D model
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color( 0xffffff );
@@ -31,9 +37,9 @@ function init() {
 	//load gltf file
 	var gLoader = new THREE.GLTFLoader();
 
-	console.log("ghjghj");
+	console.log("anti");
 
-	gLoader.load('mockup_v2.09.gltf', function ( gltf ) {
+	gLoader.load('mockup_v2.11.gltf', function ( gltf ) {
 		scene.add( gltf.scene );
 		model = gltf.scene;
 		}
@@ -42,13 +48,23 @@ function init() {
 	camera.position.set(0, 600, 0);
 	camera.lookAt(new THREE.Vector3(0,0,0));
 
-	renderer = new THREE.WebGLRenderer();
-	//renderer.setSize( window.innerWidth, window.innerHeight);
-	renderer.setSize( 3000, 3000);
+	renderer = new THREE.WebGLRenderer({ antialias: true});
+	renderer.setSize( window.innerHeight, window.innerHeight);
+	//renderer.setSize( 3000, 3000);
+	//renderer.setSize( 1000, 1000);
+	//renderer.antialias = true;
 	renderer.outputEncoding = THREE.sRGBEncoding;
 
 	document.body.appendChild(renderer.domElement);
 	//document.getElementById("canvasHolder").appendChild(renderer.domElement);
+
+	function fullSize(){
+		renderer.setSize( 3000, 3000);
+	}
+
+	function smallSize(){
+		renderer.setSize( window.innerHeight, window.innerHeight);
+	}
 
 	function applyTexture(){
 		console.log("function applyTexture called");
@@ -74,7 +90,7 @@ function init() {
 					//Create material from bitmap
 					var materialBitmap = new THREE.MeshStandardMaterial({
 						map: bitmapTexture,
-						opacity: 0.90,
+						opacity: 0.95,
 						transparent: true,
 					});
 
@@ -83,7 +99,7 @@ function init() {
 					var heelColorHex = heelColor.options[heelColor.selectedIndex].value;
 					var materialHeel = new THREE.MeshStandardMaterial({
 						color: parseInt(heelColorHex, 16),
-						opacity: 0.90,
+						opacity: 0.95,
 						transparent: true,
 					});
 
@@ -92,7 +108,7 @@ function init() {
 					var toeColorHex = toeColor.options[toeColor.selectedIndex].value;
 					var materialToe = new THREE.MeshStandardMaterial({
 						color: parseInt(toeColorHex, 16),
-						opacity: 0.90,
+						opacity: 0.95,
 						transparent: true,
 					});
 
@@ -101,7 +117,7 @@ function init() {
 					var cuffColorHex = cuffColor.options[cuffColor.selectedIndex].value;
 					var materialCuff = new THREE.MeshStandardMaterial({
 						color: parseInt(cuffColorHex, 16),
-						opacity: 0.90,
+						opacity: 0.95,
 						transparent: true,
 					});
 
